@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <form class="form" id="shapeForm">
+      <div class="form__group form__group--shape">
+        <label class="form__label" for="shape">Choose a shape:</label>
+        <select class="form__select" id="shape" name="shape">
+          <option class="form__option" value="rectangle">Rectangle</option>
+          <option class="form__option" value="square">Square</option>
+          <option class="form__option" value="circle">Circle</option>
+        </select>
+      </div>
+
+      <div class="form__group form__group--dimensions" id="dimensions">
+        <span class="form__length" id="form__length">
+          <label class="form__label" for="length">Length:</label>
+          <input
+            class="form__input"
+            type="number"
+            id="length"
+            name="length"
+            required
+          />
+        </span>
+
+        <span class="form__width" id="form__width">
+          <label
+            class="form__label"
+            for="width"
+            id="widthLabel"
+            >Width:</label
+          >
+          <input
+            class="form__input"
+            type="number"
+            id="width"
+            name="width"
+          />
+        </span>
+      </div>
+
+      <div class="form__group form__group--results" id="results">
+        <p class="form__result" id="area"></p>
+        <p class="form__result" id="perimeter"></p>
+      </div>
+
+      <button class="form__button" type="submit">Calculate</button>
+    </form>
+    <div class="canvas-wrapper">
+        <canvas
+        id="shapeCanvas"
+        width="300"
+        height="300"
+        style="border: 1px solid #000; margin-top: 20px"
+        class="canvas"
+      ></canvas>
+    </div>
+    
+    <script src="./js/calculateSurfaces.js"></script>
+  </body>
+</html>
